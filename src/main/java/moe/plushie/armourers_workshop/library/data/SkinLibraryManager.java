@@ -46,6 +46,10 @@ public abstract class SkinLibraryManager implements ISkinLibraryListener {
         return true;
     }
 
+    public boolean shouldMaintenanceFile(Player player) {
+        return true;
+    }
+
     @Override
     public void libraryDidReload(ISkinLibrary library) {
         listeners.forEach(listener -> listener.libraryDidReload(library));
@@ -136,8 +140,9 @@ public abstract class SkinLibraryManager implements ISkinLibraryListener {
             syncedPlayers.add(uuid);
             String key = Constants.PRIVATE + "/" + uuid;
             String name = player.getDisplayName();
+            SkinLibrarySetting setting = new SkinLibrarySetting(player);
             ArrayList<SkinLibraryFile> privateFiles = this.privateFiles.getOrDefault(key, new ArrayList<>());
-            UpdateLibraryFilesPacket packet = new UpdateLibraryFilesPacket(publicFiles, privateFiles);
+            UpdateLibraryFilesPacket packet = new UpdateLibraryFilesPacket(publicFiles, privateFiles, setting);
             NetworkManager.sendTo(packet, player);
             ModLog.debug("syncing library files {}/{} to '{}'.", publicFiles.size(), privateFiles.size(), name);
         }
@@ -151,6 +156,9 @@ public abstract class SkinLibraryManager implements ISkinLibraryListener {
             if (!ModPermissions.SKIN_LIBRARY_SKIN_DOWNLOAD.accept(player)) {
                 return false;
             }
+            if (shouldMaintenanceFile(player)) {
+                return true;
+            }
             return ModConfig.Common.allowDownloadingSkins;
         }
 
@@ -159,12 +167,17 @@ public abstract class SkinLibraryManager implements ISkinLibraryListener {
             if (!ModPermissions.SKIN_LIBRARY_SKIN_UPLOAD.accept(player)) {
                 return false;
             }
+            if (shouldMaintenanceFile(player)) {
+                return true;
+            }
             return ModConfig.Common.allowUploadingSkins;
         }
 
-        public boolean shouldModifierFile(Player player) {
-            // super op can manage the public folder.
-//            return ModConfig.Common.allowLibraryRemoteManage && player.hasPermissions(5);
+        public boolean shouldMaintenanceFile(Player player) {
+//            if (ModConfig.Common.allowLibraryRemoteManage) {
+//                // super op can manage the public folder.
+//                return player != null && player.hasPermissions(5);
+//            }
             return false;
         }
 

@@ -5,7 +5,7 @@ import net.cocoonmc.core.resources.ResourceLocation;
 public class ModConstants {
 
     public static final String MOD_ID = "armourers_workshop";
-    public static final String MOD_NET_ID = "f";
+    public static final String MOD_NET_ID = "g";
 
     public static final String ENTITY_MANNEQUIN = entityType("mannequin");
     public static final String ENTITY_SEAT = entityType("seat");
