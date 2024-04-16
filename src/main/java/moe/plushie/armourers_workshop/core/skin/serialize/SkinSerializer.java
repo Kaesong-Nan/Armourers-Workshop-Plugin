@@ -59,6 +59,9 @@ public class SkinSerializer {
     }
 
     private static SkinFileHeader _readSkinInfoFromStream(byte[] bytes, int fileVersion) throws IOException, NewerFileVersionException {
+        if (fileVersion >= 20) {
+            throw new NewerFileVersionException();
+        }
         if (fileVersion >= 13) {
             return _readSkinInfoFromStream_v13(bytes, fileVersion);
         }
@@ -67,7 +70,7 @@ public class SkinSerializer {
 
     private static SkinFileHeader _readSkinInfoFromStream_v12(byte[] bytes, int fileVersion) throws IOException, NewerFileVersionException {
         IDataInputStream stream = null;
-        stream = createStream(bytes, 0, bytes.length);
+        stream = createStream(bytes, 4, bytes.length);
         SkinProperties properties = null;
         boolean loadedProps = true;
         IOException e = null;
