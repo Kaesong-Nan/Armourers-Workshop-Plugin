@@ -333,7 +333,7 @@ public class SkinSerializer {
     }
 
     private static IDataInputStream createStream(byte[] bytes, int start, int end) {
-        return IDataInputStream.of(new DataInputStream(new ByteArrayInputStream(bytes, start, end)));
+        return IDataInputStream.of(new DataInputStream(new ByteArrayInputStream(bytes, start, end - start)));
     }
 
     private static class Range {
