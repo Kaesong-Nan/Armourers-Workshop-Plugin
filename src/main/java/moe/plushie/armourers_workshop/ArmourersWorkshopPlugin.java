@@ -55,7 +55,7 @@ public final class ArmourersWorkshopPlugin extends JavaPlugin {
         // Plugin startup logic
         getServer().getPluginManager().registerEvents(new EntityEventHandler(), this);
         PacketEventHandler.init();
-        new Metrics(this, 22663);
+        new Metrics(this, 22668);
     }
 
     @Override
