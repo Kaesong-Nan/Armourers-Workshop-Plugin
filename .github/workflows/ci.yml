@@ -42,7 +42,7 @@ jobs:
         version-type: release
 
         files: build/libs/!(*-@(dev-shadow|sources|javadoc|)).jar
-
+ 
         loaders:
           bukkit
 
