@@ -6,7 +6,6 @@ import dev.dejvokep.boostedyaml.block.Block;
 import moe.plushie.armourers_workshop.api.config.IConfigBuilder;
 import moe.plushie.armourers_workshop.api.config.IConfigSpec;
 import moe.plushie.armourers_workshop.api.config.IConfigValue;
-import moe.plushie.armourers_workshop.init.ModConstants;
 import moe.plushie.armourers_workshop.init.ModLog;
 
 import java.io.File;
@@ -36,7 +35,7 @@ public class SimpleConfig implements IConfigSpec, IConfigBuilder {
     public SimpleConfig(File configDir, String type) {
         this.type = type;
         try {
-            this.config = YamlDocument.create(new File(configDir, String.format("%s-%s.yml", ModConstants.MOD_ID, type)));
+            this.config = YamlDocument.create(new File(configDir, "config.yml"));
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
