@@ -2,17 +2,18 @@ package moe.plushie.armourers_workshop.init.platform;
 
 import org.bukkit.Bukkit;
 import org.bukkit.World;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
 public class EnvironmentManager {
 
     public static File getRootDirectory() {
-        return new File("armourers_workshop");
+        return JavaPlugin.getProvidingPlugin(EnvironmentManager.class).getDataFolder();
     }
 
     public static File getConfigDirectory() {
-        return new File("config");
+        return getRootDirectory();
     }
 
     public static File getSkinLibraryDirectory() {
