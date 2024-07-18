@@ -3,6 +3,7 @@ package moe.plushie.armourers_workshop.init.handler;
 import moe.plushie.armourers_workshop.core.network.NetworkManager;
 import moe.plushie.armourers_workshop.core.skin.EntityProfile;
 import moe.plushie.armourers_workshop.init.ModEntityProfiles;
+import moe.plushie.armourers_workshop.utils.SkinUtils;
 import net.cocoonmc.Cocoon;
 import net.cocoonmc.core.network.protocol.ClientboundAddEntityPacket;
 import net.cocoonmc.core.network.protocol.Packet;
@@ -28,6 +29,7 @@ public class PacketEventHandler {
             }
             EntityProfile entityProfile = ModEntityProfiles.getProfile(entity);
             if (entityProfile != null) {
+                SkinUtils.copySkinFromOwner(entity);
                 NetworkManager.sendWardrobeTo(entity, player);
             }
         });
