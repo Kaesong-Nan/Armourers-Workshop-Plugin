@@ -1,17 +1,17 @@
 # Armourers-Workshop-Plugin
 Armourers-Workshop-Plugin
 
-✅ [[ Modrinth Link （Armourers-Workshop-Plugin） ]](https://modrinth.com/plugin/armourers-workshop-plugin) `Plugin`
+🔗 [[ Modrinth Link （Armourers-Workshop-Plugin） ]](https://modrinth.com/plugin/armourers-workshop-plugin) `Plugin`
 
-✅ [[ Modrinth Link （Armourers-Workshop） ]](https://modrinth.com/mod/armourers-workshop/versions) `Mod`
+🔗 [[ Modrinth Link （Armourers-Workshop） ]](https://modrinth.com/mod/armourers-workshop/versions) `Mod`
 
-✅ [[ Modrinth Link （Cocoon） ]](https://modrinth.com/plugin/cocoon/versions?l=bukkit) `Depend`
+🔗 [[ Modrinth Link （Cocoon） ]](https://modrinth.com/plugin/cocoon/versions?l=bukkit) `Depend`
 
 ***
 
-**如何使用：**
+**❓ 如何使用：**
 
-对于插件服务器所有者：
+✅ 对于插件服务器所有者：
 
 1. > 安装任何 bukkit 服务器
 
@@ -19,7 +19,7 @@ Armourers-Workshop-Plugin
 
 3. > 安装Armourer's Workshop 插件
 
-对于插件服务器的客户端用户：
+✅ 对于插件服务器的客户端用户：
 
 1. > 安装 fabirc/forge 客户端
 
@@ -29,7 +29,7 @@ Armourers-Workshop-Plugin
 
 ***
 
-**How To Use:**
+**❓ How To Use:**
 
 For Plugin Server Owner:
 
