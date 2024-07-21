@@ -1,6 +1,10 @@
 # Armourers-Workshop-Plugin
 Armourers-Workshop-Plugin
 
+```
+以下内容的汉化和排版来自 Kaesong-Nan
+```
+
 🆘 [[`Issue`]](https://github.com/SAGESSE-CN/Armourers-Workshop-Plugin/issues)      :octocat:[[`Author`]](https://github.com/SAGESSE-CN)
 
 🔗  `Plugin` [[ Modrinth Link （Armourers-Workshop-Plugin） ]](https://modrinth.com/plugin/armourers-workshop-plugin)
