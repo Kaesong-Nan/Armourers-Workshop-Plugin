@@ -1,11 +1,13 @@
 # Armourers-Workshop-Plugin
 Armourers-Workshop-Plugin
 
-🔗 [[ Modrinth Link （Armourers-Workshop-Plugin） ]](https://modrinth.com/plugin/armourers-workshop-plugin) `Plugin`
+🆘 [[`Issue`]](https://github.com/SAGESSE-CN/Armourers-Workshop-Plugin/issues)      :octocat:[[`Author`]](https://github.com/SAGESSE-CN)
 
-🔗 [[ Modrinth Link （Armourers-Workshop） ]](https://modrinth.com/mod/armourers-workshop/versions) `Mod`
+🔗  `Plugin` [[ Modrinth Link （Armourers-Workshop-Plugin） ]](https://modrinth.com/plugin/armourers-workshop-plugin)
 
-🔗 [[ Modrinth Link （Cocoon） ]](https://modrinth.com/plugin/cocoon/versions?l=bukkit) `Depend`
+🔗  `Mod` [[ Modrinth Link （Armourers-Workshop） ]](https://modrinth.com/mod/armourers-workshop/versions) 
+
+🔗  `Depend` [[ Modrinth Link （Cocoon） ]](https://modrinth.com/plugin/cocoon/versions?l=bukkit)
 
 ***
 
